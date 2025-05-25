@@ -1,11 +1,25 @@
-# Titulo de la clase 
-El título de cada clase, correspondiente al tema general que se trabaje en clase. Siempre después de cada título de clase, redactar una breve introducción (mínimo un párrafo) que de una mirada general al tema
+# Clase: Análisis de Sistemas en Lazo y Diagrama de Flujo de Señales
+En esta clase se abordó el análisis de sistemas representados por diagramas de bloques y diagramas de flujo de señales. Se analizaron diferentes trayectorias en diagramas complejos, se calcularon funciones de transferencia aplicando la regla de Mason y se redujeron estructuras en lazos. Este tema es fundamental en el estudio de sistemas de control, donde se busca determinar la relación entrada-salida de sistemas lineales.
 ## 1. Subtítulos
-Agregue todos los subtítulos que considere necesarios para estructurar el contenido de la clase. Es importante que considere jerarquías de los temas para definir el orden de estos subtítulos. Cada subtítulo debe ir numerado como una sección, de la manera en que lo presenta esta plantilla
+
+1.1 Definición y utilidad del diagrama de flujo de señales
+
+1.2 Caminos hacia adelante (Paths)
+
+1.3 Lazos individuales y lazos no tocados
+
+1.4 Aplicación de la regla de Mason
+
+1.5 Reducción de sistemas con retroalimentación
 
 ## 2. Definiciones
-Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
+🔑 Camino hacia adelante: Es una ruta desde la entrada a la salida sin pasar dos veces por el mismo nodo.
+
+🔑 Lazo: Cualquier ruta cerrada en el grafo donde se regresa al mismo nodo inicial sin repetir nodos.
+
+🔑 Lazos no tocados: Lazos que no comparten nodos entre sí.
+
+🔑 Determinante de Mason ($\Delta$): Valor que se usa para calcular la función de transferencia total del sistema.
 
 ## 3. Subsecciones
 Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
