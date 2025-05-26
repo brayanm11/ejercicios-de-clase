@@ -49,6 +49,47 @@ No hay lazos que no se crucen entre sí (todos comparten nodos). Entonces:
 
 $\Delta = 1 - (\text{suma de las ganancias de lazos})$
 
+$$ \Delta =1-\left [ (-\frac{1}{4})+2.8+0.05 \right ]=1-2.6=-1.85$$
+
+📌 Paso 4: Calcular $\Delta_k$ para cada trayectoria
+Ya que cada trayectoria toca al menos un lazo, entonces:
+
+$\Delta_1 = \Delta_2 = 1$
+
+📌 Paso 5: Aplicar la fórmula de Mason
+La fórmula es:
+
+$$H(s)=\frac{\sum _{k}P_{k}\Delta _{k}}{\Delta }$$
+
+Sustituyendo:
+
+$$H(s)=\frac{(-1)(1)+(14)(1)}{-1.85}=\frac{13}{-1.85}=-7.03$$
+
+Resultado final:
+
+$$H(s)=−7.03$$
+
+
+
+💡 Simulación con Python:
+```
+from sympy import symbols, simplify
+
+# Variables
+P1 = -1
+P2 = 14
+
+# Determinantes
+Delta = 1 - ((-1/4) + 2.8 + 0.05)  # L1 + L2 + L3
+Delta1 = 1
+Delta2 = 1
+
+# Mason's Formula
+H = (P1*Delta1 + P2*Delta2) / Delta
+
+# Resultado
+print("H(s) =", simplify(H))
+```
 ## 10. Conclusiones
 
 La regla de Mason es una herramienta poderosa para calcular la función de transferencia sin necesidad de reducir manualmente los diagramas.
