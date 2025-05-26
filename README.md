@@ -24,6 +24,8 @@ En esta clase se abordó el análisis de sistemas representados por diagramas de
 ## 9. Ejercicios
 📚Ejemplo 1: Cálculo de la función de transferencia con Mason: haga este sistema:
 
+![solucion1](solucion1.png)
+
 📌 Paso 1: Identificar trayectorias hacia adelante
 Analizamos los caminos desde la entrada hasta la salida:
 
