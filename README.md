@@ -24,7 +24,7 @@ En esta clase se abordó el análisis de sistemas representados por diagramas de
 ## 9. Ejercicios
 📚Ejemplo 1: Cálculo de la función de transferencia con Mason: haga este sistema:
 
-![solucion1](solucion1.png)
+![solucion1](solucionclase1.png)
 
 📌 Paso 1: Identificar trayectorias hacia adelante
 Analizamos los caminos desde la entrada hasta la salida:
@@ -96,48 +96,60 @@ print("H(s) =", simplify(H))
 
 Calcular la función de transferencia del siguiente sistema en lazo cerrado:
 
+![solucion2](solucionclase2.png)
 
 Objetivo:
 Obtener la función de transferencia del sistema:
-$T(s) = \frac{Y(s)}{R(s)}$
+
+$$T(s) = \frac{Y(s)}{R(s)}$$
 
 Paso 1: Identificar los bloques del sistema
 Bloques en serie (adelante):
 
 Primer bloque:
+
 $G_1(s) = \frac{10}{s+1}$
 
 Segundo bloque:
+
 $G_2(s) = \frac{30s}{s^2 + 2s + 3}$
 
 Entonces:
+
 $G(s) = G_1(s) \cdot G_2(s) = \frac{10}{s+1} \cdot \frac{30s}{s^2 + 2s + 3} = \frac{300s}{(s+1)(s^2 + 2s + 3)}$
 
 Camino de retroalimentación (feedback):
+
 $H(s) = \frac{1}{\frac{s+1}{s^2 + 2s + 3}} = \frac{s^2 + 2s + 3}{s+1}$
 
 Paso 2: Aplicar fórmula de sistema en lazo cerrado
 La fórmula general para retroalimentación negativa es:
+
 $T(s) = \frac{G(s)}{1 + G(s)H(s)}$
 
 Sustituimos $G(s)$ y $H(s)$:
 
 Paso 2.1: Calcular $G(s)H(s)$
+
 $G(s)H(s) = \left(\frac{300s}{(s+1)(s^2 + 2s + 3)}\right) \cdot \left(\frac{s^2 + 2s + 3}{s+1}\right) = \frac{300s}{(s+1)^2}$
 
 Paso 3: Sustituir en la ecuación
+
 $T(s) = \frac{\frac{300s}{(s+1)(s^2 + 2s + 3)}}{1 + \frac{300s}{(s+1)^2}}$
 
 Multiplicamos numerador y denominador por $(s+1)^2$:
 
 Numerador:
+
 $\frac{300s(s+1)}{(s+1)^2 (s^2 + 2s + 3)}$
 
 Denominador:
+
 $1 + \frac{300s}{(s+1)^2} = \frac{(s+1)^2 + 300s}{(s+1)^2}$
 
 Resultado final
-$T(s) = \frac{300s(s+1)}{[(s+1)^2 (s^2 + 2s + 3)] + 300s(s^2 + 2s + 3)}$
+
+$$T(s) = \frac{300s(s+1)}{[(s+1)^2 (s^2 + 2s + 3)] + 300s(s^2 + 2s + 3)}$$
 
 ## 10. Conclusiones
 
