@@ -22,7 +22,32 @@ En esta clase se abordó el análisis de sistemas representados por diagramas de
 🔑 Determinante de Mason ($\Delta$): Valor que se usa para calcular la función de transferencia total del sistema.
 
 ## 9. Ejercicios
-Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
+📚Ejemplo 1: Cálculo de la función de transferencia con Mason: haga este sistema:
+
+📌 Paso 1: Identificar trayectorias hacia adelante
+Analizamos los caminos desde la entrada hasta la salida:
+
+$P_1$: $1 \to 2 \to 3 \to \text{Salida}$
+
+Ganancia: $1 \cdot 1 \cdot (-1) = -1$
+
+$P_2$: $1 \to 3 \to \text{Salida}$
+
+Ganancia: $-14 \cdot (-1) = 14$
+
+📌 Paso 2: Identificar los lazos individuales
+Los lazos (loops) cerrados son:
+
+$L_1$: $3 \to 3$ con ganancia: $-1/4$
+
+$L_2$: $1 \to 3 \to 1$ con ganancia: $(-14) \cdot (-0.2) = 2.8$
+
+$L_3$: $1 \to 3 \to 1$ (vía otro camino) con ganancia: $(-0.25)(-0.2) = 0.05$
+
+📌 Paso 3: Identificar lazos no tocantes
+No hay lazos que no se crucen entre sí (todos comparten nodos). Entonces:
+
+$\Delta = 1 - (\text{suma de las ganancias de lazos})$
 
 ## 10. Conclusiones
 
