@@ -71,6 +71,27 @@ Resultado final:
 
 $$H(s)=−7.03$$
 
+
+💡 Simulación con Python:
+```
+from sympy import symbols, simplify
+
+# Variables
+P1 = -1
+P2 = 14
+
+# Determinantes
+Delta = 1 - ((-1/4) + 2.8 + 0.05)  # L1 + L2 + L3
+Delta1 = 1
+Delta2 = 1
+
+# Mason's Formula
+H = (P1*Delta1 + P2*Delta2) / Delta
+
+# Resultado
+print("H(s) =", simplify(H))
+```
+
 📚 Ejercicio 2
 Planteamiento: Calcular la función de transferencia del siguiente sistema en lazo cerrado:
 
@@ -117,25 +138,6 @@ $1 + \frac{300s}{(s+1)^2} = \frac{(s+1)^2 + 300s}{(s+1)^2}$
 ✅ Resultado final
 $T(s) = \frac{300s(s+1)}{[(s+1)^2 (s^2 + 2s + 3)] + 300s(s^2 + 2s + 3)}$
 
-💡 Simulación con Python:
-```
-from sympy import symbols, simplify
-
-# Variables
-P1 = -1
-P2 = 14
-
-# Determinantes
-Delta = 1 - ((-1/4) + 2.8 + 0.05)  # L1 + L2 + L3
-Delta1 = 1
-Delta2 = 1
-
-# Mason's Formula
-H = (P1*Delta1 + P2*Delta2) / Delta
-
-# Resultado
-print("H(s) =", simplify(H))
-```
 ## 10. Conclusiones
 
 La regla de Mason es una herramienta poderosa para calcular la función de transferencia sin necesidad de reducir manualmente los diagramas.
